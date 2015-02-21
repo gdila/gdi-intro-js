@@ -16,55 +16,33 @@ code{
 	word-wrap: break-word;
 }
 
-/*More readable forms*/
-form label {
-display:	block;
-float:	left;
-clear:	left;
-width:	10%;
-margin-right:	10px;
-text-align:	right;
-}
-form textarea, input, select, label, button, optgroup {
-margin-top:	5px;
-} 
-
 /*Overall Design*/
 
 body{
-	background-color: #D3C7B1;
+	background-color: #fde7e8;
 	font-family: Sans-Serif;	
+	line-height: 1.5;
+	margin: 2em;
+	padding: 0;
 }
 
 #wrapper{
-	width: 75em;
-	margin: 2em auto;
 	background-color: #fff;	
 }
 
 #header{
-	background-color: #3B597D;
+	background-color: #F05B62;
 	margin: 0;
 	padding: 1em;
 	color: #fff;
 }
 
 #main{
-	background-color: #fff;
-	padding: 1em;
-	width: 58em;
-	float: left;
-}
-
-#sidebar{
-	background-color: #D68051;
-	padding: 1em;
-	width: 13em;
-	float: right;
+	padding: 2em;
 }
 
 #footer{
-	background-color: #3B597D;
+	background-color: #F05B62;
 	margin: 0;
 	padding: 1em;
 	color: #fff;
