@@ -261,11 +261,11 @@ targetPic.onclick = function () {
 	function increaseMargin() {
 		leftMarginValue++  // update parameter each time
 		targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin
-		if (leftMarginValue === 200)  // check finish condition {
+		if (leftMarginValue === 200) { // check finish condition
 			clearInterval(movePic);
 		}
-		var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
 	}
+	var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
 }
 			</code></pre>
 		</section>
