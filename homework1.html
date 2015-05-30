@@ -2,252 +2,260 @@
 <html>
 <head>
 	<title>GDI Intro to JavaScript Homework</title>
-    <link rel="stylesheet" href="classexercises.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript">    
-        // Powers show/hide buttons.
-        $( document ).ready(function() {
-            $("div.codebox").hide();
-        });
-        function showSolution(num) {
-            $("div#example" + num + "Code").toggle();
-        }
-    </script> 
+	<link rel="stylesheet" href="classexercises.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		// Powers show/hide buttons.
+		$( document ).ready(function() {
+			$("div.codebox").hide();
+		});
+		function showSolution(num) {
+			$("div#example" + num + "Code").toggle();
+		}
+	</script>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <h1>JavaScript Homework - Week 1</h1>
-        </div>
-        <div id="main">
-            <p>Welcome! This the homework to accompany the Girl Develop It <a href="http://www.meetup.com/Girl-Develop-It-Los-Angeles/events/219296901/">Intro to JavaScript</a> class. You can always reference <a href="http://gdila.github.io/gdi-intro-js/class1.html">the slides</a> if you get stuck. Commit to spend <em>at least 20 minutes</em> trying to figure out a problem before you look at the answers. It helps you learn!</p>
-            
-            <h2>1. The Fortune Teller</h2>
-            <p><em>Why pay a fortune teller when you can just program your fortune yourself?</em></p>
-            <ul>
-                <li>Store the following into variables: number of children, partner's name, geographic location, job title.</li>
-                <li>Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."</li>
-            </ul>
-           
-            <button onclick="showSolution(1)">Show/Hide Solution</button>
-            <div class="codebox" id="example1Code">
-                <pre><code>
-var numKids  = 5;
-var partner  = 'David Beckham';
-var location = 'Costa Rica';
-var jobTitle = 'web developer';
+	<div id="wrapper">
+		<div id="header">
+			<h1>JavaScript Homework - Week 1</h1>
+		</div>
+		<div id="main">
+			<p>Welcome! This the homework to accompany the Girl Develop It <a href="http://www.meetup.com/Girl-Develop-It-Los-Angeles/events/221660477/">Intro to JavaScript</a> class. You can always reference <a href="http://gdila.github.io/gdi-intro-js/">the slides</a> if you get stuck. Commit to spend <em>at least 20 minutes</em> trying to figure out a problem before you look at the answers. It helps you learn!</p>
 
-var future = 'You will be a ' + jobTitle + ' in ' + location + ', and married to ' +
-   partner + ' ' + ' with ' + numKids + ' kids.';
+			<h2>1. The Fortune Teller</h2>
+			<p><em>Why pay a fortune teller when you can just program your fortune yourself?</em></p>
+			<ul>
+				<li>Store the following into variables: number of children, partner's name, geographic location, job title.</li>
+				<li>Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."</li>
+			</ul>
+
+			<button onclick="showSolution(1)">Show/Hide Solution</button>
+			<div class="codebox" id="example1Code">
+				<pre><code>
+var numKids  = 2;
+var partner  = 'Jon Hamm';
+var residence = 'Bora Bora';
+var jobTitle = 'first class web developer';
+
+var future = 'You will be a ' + jobTitle + ' in ' + residence + ', and married to ' + partner + ' with ' + numKids + ' kids.';
+
 console.log(future);
-                </code></pre>
-            </div>
-            
-            <h2>2. The Calculator</h2>
-            <ul>
-                 <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9." </li>
-                 <li>Write a function called <code>halfNumber</code> that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of  5 is 2.5.".</li>
-                 <li>Write a function called <code>percentOf</code> that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."</li>
-                 <li>Write a function called <code>areaOfCircle</code> that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
-                    <ul><li>Bonus: Round the result so there are only two digits after the decimal.</li></ul>
-                 </li>
-                 <li>Write a function that will take one argument (a number) and perform the following operations, using the functions
-                 you wrote earlier:
-                      <ol>
-                       <li>Take half of the number and store the result.</li>
-                       <li>Square the result of #1 and store that result.</li>
-                       <li>Calculate the area of a circle with the result of #2 as the radius.</li>
-                       <li>Calculate what percentage that area is of the squared result (#3).</li>
-                      </ol>
-                </li>
-            </ul>
-            
-            <button onclick="showSolution(2)">Show/Hide Solution</button>
-            <div class="codebox" id="example2Code">
-                <pre><code>
+				</code></pre>
+			</div>
+
+			<h2>2. The Calculator</h2>
+			<ul>
+				 <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9." </li>
+				 <li>Write a function called <code>halfNumber</code> that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of  5 is 2.5.".</li>
+				 <li>Write a function called <code>percentOf</code> that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."</li>
+				 <li>Write a function called <code>areaOfCircle</code> that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
+					<ul><li>Bonus: Round the result so there are only two digits after the decimal.</li></ul>
+				 </li>
+				 <li>Write a function that will take one argument (a number) and perform the following operations, using the functions
+				 you wrote earlier:
+					  <ol>
+					   <li>Take half of the number and store the result.</li>
+					   <li>Square the result of #1 and store that result.</li>
+					   <li>Calculate the area of a circle with the result of #2 as the radius.</li>
+					   <li>Calculate what percentage that area is of the squared result (#3).</li>
+					  </ol>
+				</li>
+			</ul>
+
+			<button onclick="showSolution(2)">Show/Hide Solution</button>
+			<div class="codebox" id="example2Code">
+				<pre><code>
 function squareNumber(num) {
-    var squaredNumber = num * num;
-    console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
-    return squaredNumber;
+	var squaredNumber = num * num;
+	console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
+	return squaredNumber;
 }
 
 squareNumber(3);
 
 function halfOf(num) {
-    var half = num / 2;
-    console.log('Half of ' + num + ' is ' +  half);
-    return half;
+	var half = num / 2;
+	console.log('Half of ' + num + ' is ' +  half);
+	return half;
 }
 
 halfOf(5);
 
 function percentOf(num1, num2) {
-    var percent = (num1/num2) * 100;
-    console.log(num1 + ' is ' + percent + '% of ' + num2);
-    return percent;
+	var percent = (num1/num2) * 100;
+	console.log(num1 + ' is ' + percent + '% of ' + num2);
+	return percent;
 }
 
 percentOf(5, 10);
 
 function areaOfCircle(radius) {
-    var area = Math.PI * squareNumber(radius);
-    console.log('The area of circle with radius ' + radius + ' is ' + area);
-    return area;
+	var area = Math.PI * squareNumber(radius);
+	console.log('The area of circle with radius ' + radius + ' is ' + area);
+	return area;
 }
 
 areaOfCircle(2);
 
 function doCrazyStuff(num) {
-    var half    = halfOf(num);
-    var squared = squareNumber(half);
-    var area    = areaOfCircle(squared);
-    var result  = percentOf(squared, area);
+	var half    = halfOf(num);
+	var squared = squareNumber(half);
+	var area    = areaOfCircle(squared);
+	var result  = percentOf(squared, area);
 }
 
 doCrazyStuff(5);
-                </code></pre>
-            </div>
-            
-            <h2>3. MixUp</h2>
-            <p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
-            <pre>
+				</code></pre>
+			</div>
+
+			<h2>3. MixUp</h2>
+			<p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
+			<pre>
 mixUp('mix', pod'): 'pox mid'
 mixUp('dog', 'dinner'): 'dig donner'
-            </pre>
+			</pre>
 
 			<p><strong>Hint:</strong> You'll need to use some of the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">built-in JavaScript methods for strings</a>. Methods are pre-written functions that are built into the language.</p>
-           
-            <button onclick="showSolution(3)">Show/Hide Solution</button>
-            <div class="codebox" id="example3Code">
-                <pre><code>
+
+			<button onclick="showSolution(3)">Show/Hide Solution</button>
+			<div class="codebox" id="example3Code">
+				<pre><code>
 //This function uses the slice() method. It extracts a part of a string and returns a new string
 function mixUp(string1, string2) {
   return string1.slice(0, 2) + string2.slice(2) + " " + string2.slice(0, 2) + string1.slice(2);
 }
-                </code></pre>
-            </div>
-            
-            <h2>4. FixStart</h2>
-            <p>Create a function called <code>fixStart</code>. It should take a single argument, a string, and return a version where all occurrences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:</p>
-            <pre>
+
+console.log(mixUp('dogs', 'cats'));
+				</code></pre>
+			</div>
+
+			<h2>4. FixStart</h2>
+			<p>Create a function called <code>fixStart</code>. It should take a single argument, a string, and return a version where all occurrences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:</p>
+			<pre>
 fixStart('babble'): 'ba**le'
 fixStart('turtle'): 'tur*le'
-            </pre>
-            
-            <button onclick="showSolution(4)">Show/Hide Solution</button>
-            <div class="codebox" id="example4Code">
-                <pre><code>
+			</pre>
+
+			<button onclick="showSolution(4)">Show/Hide Solution</button>
+			<div class="codebox" id="example4Code">
+				<pre><code>
 //This function uses a few new methods and regular expressions
 function fixStart(inputString) {
   var firstChar = inputString.charAt(0);
   return firstChar + inputString.slice(1).replace(new RegExp(firstChar, 'g'), '*');
 }
-                </code></pre>
-            </div>
 
-            <h2>5. What number is bigger?</h2>
-            <p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
-            <p>Don't forget to test it!</p>
-           
-            <button onclick="showSolution(5)">Show/Hide Solution</button>
-            <div class="codebox" id="example5Code">
-                <pre><code>
+console.log(fixStart('bubble bubble toil and trouble'));
+				</code></pre>
+			</div>
+
+			<h2>5. What number is bigger?</h2>
+			<p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
+			<p>Don't forget to test it!</p>
+
+			<button onclick="showSolution(5)">Show/Hide Solution</button>
+			<div class="codebox" id="example5Code">
+				<pre><code>
 function greaterNum(num1, num2) {
-    if (num1 === num2) {
-        console.log ('Those numbers are equal');
-        return num1;
-    } else if (num1 &gt; num2) {
-        return num1;
-    } else if (num2 &gt; num1) {
-        return num2;
-    } else {
-        console.log ('Those are simply incomparable!');
-        return undefined;
-    }
+	if (num1 === num2) {
+		return 'Those numbers are equal! They\'re both ' + num1;
+	} else if (num1 > num2) {
+		return num1;
+	} else if (num2 > num1) {
+		return num2;
+	} else {
+		return 'Those are simply incomparable!';
+	}
 }
 
-console.log (greaterNum(3, 3));
-console.log (greaterNum(7, -2));
-console.log (greaterNum(5, 9));
-console.log (greaterNum(5, 'dog'));
-                </code></pre>
-            </div>
+console.log(greaterNum(3, 3));
+console.log(greaterNum(7, -2));
+console.log(greaterNum(5, 9));
+console.log(greaterNum(5, 'dog'));
+				</code></pre>
+			</div>
 
-            <h2>6. Pluralize</h2>
-            <p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
-            <pre>
+			<h2>6. Pluralize</h2>
+			<p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
+			<pre>
 pluralize(5, 'cat'): '5 cats'
 pluralize(7, 'turtle'): '7 cats'
-            </pre>
-            <p>Bonus: Make it handle a few collective nouns like "sheep" and "geese".</p>
+			</pre>
+			<p>Bonus: Make it handle a few irregular plural nouns like "deer" and "geese".</p>
 
-           
-            <button onclick="showSolution(6)">Show/Hide Solution</button>
-            <div class="codebox" id="example6Code">
-                <pre><code>
+
+			<button onclick="showSolution(6)">Show/Hide Solution</button>
+			<div class="codebox" id="example6Code">
+				<pre><code>
 function pluralize(number, noun) {
-    if (number != 1 &amp;&amp; noun != 'sheep' &amp;&amp; noun != 'geese') {
-        return number + ' ' + noun + 's';
-    } else {
-        return number + ' ' + noun;
-    }
+	if ( noun === 'goose' && number != 1) {
+		return number + ' ' + 'geese';
+	} else if ( noun === 'mouse' && number != 1) {
+		return number + ' ' + 'mice';
+	} else if (number != 1 && noun != 'sheep' && noun != 'deer' && noun != 'moose') {
+		return number + ' ' + noun + 's';
+	} else {
+		return number + ' ' + noun;
+	}
 }
 console.log('I have ' + pluralize(0, 'cat'));
 console.log('I have ' + pluralize(1, 'cat'));
-console.log('I have ' + pluralize(2, 'cat'));
-console.log('I have ' + pluralize(3, 'geese'));
-                </code></pre>
-            </div>
+console.log('I have ' + pluralize(2, 'mouse'));
+console.log('I have ' + pluralize(6, 'goose'));
+console.log('I have ' + pluralize(3, 'moose'));
+console.log('I have ' + pluralize(7, 'deer'));
+				</code></pre>
+			</div>
 
-            <h2>7. Even/Odd Counter</h2>
-            <p>Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even")</p>
+			<h2>7. Even/Odd Counter</h2>
+			<p>Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even")</p>
 
-            <button onclick="showSolution(7)">Show/Hide Solution</button>
-            <div class="codebox" id="example7Code">
-                <pre><code>
+			<button onclick="showSolution(7)">Show/Hide Solution</button>
+			<div class="codebox" id="example7Code">
+				<pre><code>
 for (var i = 0; i &lt;= 20; i++) {
-    if (i % 2 === 0) {
-        console.log(i + ' is even');
-    } else {
-        console.log(i + ' is odd');
-    }
+	if (i % 2 === 0) {
+		console.log(i + ' is even');
+	} else {
+		console.log(i + ' is odd');
+	}
 }
-                </code></pre>
-            </div> 
+				</code></pre>
+			</div>
 
-            <h2>8. Top Choice</h2>
-            <p>Create an array to hold your top choices (colors, presidents, whatever). For each choice, log to the screen a string like: "My #1 choice is blue." Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.</p>
+			<h2>8. Top Choice</h2>
+			<p>Create an array to hold your top choices (colors, presidents, whatever). For each choice, log to the screen a string like: "My #1 choice is blue." Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.</p>
 
-            <button onclick="showSolution(8)">Show/Hide Solution</button>
-            <div class="codebox" id="example8Code">
-                <pre><code>
+			<button onclick="showSolution(8)">Show/Hide Solution</button>
+			<div class="codebox" id="example8Code">
+				<pre><code>
 var choices = ['red', 'orange', 'pink', 'yellow'];
 for (var i = 0; i &lt; choices.length; i++) {
-    console.log('My #' + (i + 1) + ' choice is ' + choices[i]);
+	console.log('My #' + (i + 1) + ' choice is ' + choices[i]);
 }
 
 for (var i = 0; i &lt; choices.length; i++) {
-    var choiceNum = i + 1;
-    var choiceNumSuffix;
-    if (choiceNum == 1) {
-        choiceNumSuffix = 'st';
-    } else if (choiceNum == 2) {
-        choiceNumSuffix = 'nd';
-    } else if (choiceNum == 3) {
-        choiceNumSuffix = 'rd';
-    } else {
-        choiceNumSuffix = 'th';
-    }
-    console.log('My ' + choiceNum + choiceNumSuffix + ' choice is ' + choices[i]);
+	var choiceNum = i + 1;
+	var choiceNumSuffix;
+	if (choiceNum == 1) {
+		choiceNumSuffix = 'st';
+	} else if (choiceNum == 2) {
+		choiceNumSuffix = 'nd';
+	} else if (choiceNum == 3) {
+		choiceNumSuffix = 'rd';
+	} else {
+		choiceNumSuffix = 'th';
+	}
+	console.log('My ' + choiceNum + choiceNumSuffix + ' choice is ' + choices[i]);
 }
-                </code></pre>
-            </div>
-            
-          
-        </div>
-        <div id="footer">
-            <p>Homework questions and code by Sylvia Richardson and Pamela Fox. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-        </div>
-    </div>
+				</code></pre>
+			</div>
+
+
+		</div>
+		<div id="footer">
+			<p>Homework questions and code by Sylvia Richardson and Pamela Fox. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+		</div>
+	</div>
 </body>
 </html>
