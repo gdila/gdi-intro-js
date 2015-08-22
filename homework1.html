@@ -108,48 +108,7 @@ doCrazyStuff(5);
 				</code></pre>
 			</div>
 
-			<h2>3. MixUp</h2>
-			<p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
-			<pre>
-mixUp('mix', pod'): 'pox mid'
-mixUp('dog', 'dinner'): 'dig donner'
-			</pre>
-
-			<p><strong>Hint:</strong> You'll need to use some of the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">built-in JavaScript methods for strings</a>. Methods are pre-written functions that are built into the language.</p>
-
-			<button onclick="showSolution(3)">Show/Hide Solution</button>
-			<div class="codebox" id="example3Code">
-				<pre><code>
-//This function uses the slice() method. It extracts a part of a string and returns a new string
-function mixUp(string1, string2) {
-  return string1.slice(0, 2) + string2.slice(2) + " " + string2.slice(0, 2) + string1.slice(2);
-}
-
-console.log(mixUp('dogs', 'cats'));
-				</code></pre>
-			</div>
-
-			<h2>4. FixStart</h2>
-			<p>Create a function called <code>fixStart</code>. It should take a single argument, a string, and return a version where all occurrences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:</p>
-			<pre>
-fixStart('babble'): 'ba**le'
-fixStart('turtle'): 'tur*le'
-			</pre>
-
-			<button onclick="showSolution(4)">Show/Hide Solution</button>
-			<div class="codebox" id="example4Code">
-				<pre><code>
-//This function uses a few new methods and regular expressions
-function fixStart(inputString) {
-  var firstChar = inputString.charAt(0);
-  return firstChar + inputString.slice(1).replace(new RegExp(firstChar, 'g'), '*');
-}
-
-console.log(fixStart('bubble bubble toil and trouble'));
-				</code></pre>
-			</div>
-
-			<h2>5. What number is bigger?</h2>
+			<h2>3. What number is bigger?</h2>
 			<p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
 			<p>Don't forget to test it!</p>
 
@@ -175,7 +134,7 @@ console.log(greaterNum(5, 'dog'));
 				</code></pre>
 			</div>
 
-			<h2>6. Pluralize</h2>
+			<h2>4. Pluralize</h2>
 			<p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
 			<pre>
 pluralize(5, 'cat'): '5 cats'
@@ -207,7 +166,7 @@ console.log('I have ' + pluralize(7, 'deer'));
 				</code></pre>
 			</div>
 
-			<h2>7. Even/Odd Counter</h2>
+			<h2>5. Even/Odd Counter</h2>
 			<p>Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even")</p>
 
 			<button onclick="showSolution(7)">Show/Hide Solution</button>
@@ -223,7 +182,7 @@ for (var i = 0; i &lt;= 20; i++) {
 				</code></pre>
 			</div>
 
-			<h2>8. Top Choice</h2>
+			<h2>6. Top Choice</h2>
 			<p>Create an array to hold your top choices (colors, presidents, whatever). For each choice, log to the screen a string like: "My #1 choice is blue." Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.</p>
 
 			<button onclick="showSolution(8)">Show/Hide Solution</button>
@@ -251,6 +210,26 @@ for (var i = 0; i &lt; choices.length; i++) {
 				</code></pre>
 			</div>
 
+			<h2>Challenge Question!: MixUp</h2>
+			<p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
+			<pre>
+mixUp('mix', pod'): 'pox mid'
+mixUp('dog', 'dinner'): 'dig donner'
+			</pre>
+
+			<p><strong>Hint:</strong> You'll need to use some of the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">built-in JavaScript methods for strings</a>. Methods are pre-written functions that are built into the language.</p>
+
+			<button onclick="showSolution(3)">Show/Hide Solution</button>
+			<div class="codebox" id="example3Code">
+				<pre><code>
+//This function uses the slice() method. It extracts a part of a string and returns a new string
+function mixUp(string1, string2) {
+  return string1.slice(0, 2) + string2.slice(2) + " " + string2.slice(0, 2) + string1.slice(2);
+}
+
+console.log(mixUp('dogs', 'cats'));
+				</code></pre>
+			</div>
 
 		</div>
 		<div id="footer">
