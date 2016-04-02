@@ -165,7 +165,7 @@ console.log (temperature);</code></pre>
 					<p>Radio buttons usually do not have IDs, so you will need to use an array:</p>
 <pre><code>var radios = document.getElementsByName('tempFormat');
 
-for (var i = 0, length = radios.length; i &lt; length; i++) {
+for (var i = 0; i &lt; radios.length; i++) {
 	if (radios[i].checked) {
 		var radioButtonValue = radios[i].value;
 		// only one radio can be checked, so stop now
