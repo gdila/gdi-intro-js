@@ -143,14 +143,14 @@ aboutMe.hair = 'pink';</code></pre>
 					<p>Since arrays can hold any data type, they can also hold objects</p>
 <pre><code>var myCats = [
 	{name: 'Mabel',
-	age: '6 years'},
+	age: '6'},
 	{name: 'Ollie',
-	age: '1 year'}
+	age: '2'}
 ];
 
 for (var i = 0; i &lt; myCats.length; i++) {
 	var myCat = myCats[i];
-	console.log(myCat.name + ' is ' + myCat.age + ' old.');
+	console.log(myCat.name + ' is ' + myCat.age + ' years old.');
 }</code></pre>
 				</section>
 
@@ -158,10 +158,10 @@ for (var i = 0; i &lt; myCats.length; i++) {
 					<h3>Arrays of Objects</h3>
 					<p>Just like other data types, objects can be passed into functions:</p>
 <pre><code>var mabelTheCat = {
-	age: 5,
+	age: 6,
 	furColor: 'grey',
 	likes: ['catnip', 'naps', 'snacks'],
-	birthday: {month: 11, day: 25, year: 2010}
+	birthday: {month: 11, day: 25, year: 2009}
 }
 
 function describeCat(cat) {
@@ -182,7 +182,7 @@ describeCat(mabelTheCat);</code></pre>
 					<h3>Object Methods</h3>
 					<p>Objects can also hold functions.</p>
 <pre><code>var mabelTheCat = {
-	age: 5,
+	age: 6,
 	furColor: 'grey',
 	meow: function() {
 		console.log('meowww');
